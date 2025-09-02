@@ -5,6 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ayushil Gold - Ayurvedic Power & Strength Kit</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    // YAHAN APNA META PIXEL ID DALEN
+    fbq('init', '1234567890123456');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1234567890123456&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    
     <style>
         * {
             margin: 0;
@@ -711,7 +731,7 @@
                 <div class="badge">100% Natural</div>
             </div>
             
-            <a href="#order" class="cta-button">Buy Now</a>
+            <a href="#order" class="cta-button" onclick="fbq('track', 'InitiateCheckout');">Buy Now</a>
         </div>
     </section>
 
@@ -897,7 +917,7 @@
             <h2 class="section-title">Order Your Ayushil Gold Kit</h2>
             <div class="form-container">
                 <h3 class="form-title">Fill Your Details</h3>
-                <form name="order" method="POST" netlify>
+                <form name="order" method="POST" netlify onsubmit="fbq('track', 'Lead');">
                     <div class="form-group">
                         <label for="name">Full Name</label>
                         <input type="text" id="name" name="name" required>
@@ -930,7 +950,7 @@
                 </form>
                 <p style="text-align: center; margin-top: 20px;">Or pay directly via UPI:</p>
                 <div style="text-align: center; margin: 15px 0;">
-                    <a href="https://rzp.io/l/ayushil-gold" class="cta-button" style="background-color: #2e7d32;">Pay with Razorpay</a>
+                    <a href="https://rzp.io/l/ayushil-gold" class="cta-button" style="background-color: #2e7d32;" onclick="fbq('track', 'InitiateCheckout');">Pay with Razorpay</a>
                 </div>
             </div>
         </div>
@@ -941,7 +961,7 @@
         <div class="container">
             <h2>Ready to Live Long and Live Strong?</h2>
             <p>Order your complete Ayushil Gold Kit today and feel the difference. Limited stock available at introductory prices.</p>
-            <a href="#order" class="cta-button">Buy Now</a>
+            <a href="#order" class="cta-button" onclick="fbq('track', 'InitiateCheckout');">Buy Now</a>
         </div>
     </section>
 
@@ -1005,6 +1025,7 @@
                     }
                     
                     // If validation passes, the form will submit
+                    // Meta Pixel Lead event is triggered by onsubmit attribute
                 });
             }
             
@@ -1024,6 +1045,16 @@
                         });
                     }
                 });
+            });
+            
+            // Track ViewContent event for product page
+            fbq('track', 'ViewContent', {
+                content_name: 'Ayushil Gold Kit',
+                content_category: 'Ayurvedic Products',
+                content_ids: ['AYUSHIL_GOLD_001'],
+                content_type: 'product',
+                value: 1999,
+                currency: 'INR'
             });
         });
     </script>
