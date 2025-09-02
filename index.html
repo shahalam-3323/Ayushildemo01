@@ -1,378 +1,175 @@
-<!doctype html>
-<html lang="hi">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <title>Ayushil Gold Kit — Strength • Stamina • Vitality</title>
-  <meta name="description" content="Ayushil Gold Kit — premium Ayurvedic kit for strength, stamina & vitality. Free shipping, COD & Prepaid. Order now." />
-  <meta name="theme-color" content="#0a1220" />
-
-  <!-- Performance: system font stack (no external CSS), preconnect to payment & image host -->
-  <link rel="preconnect" href="https://rzp.io" crossorigin>
-  <link rel="preconnect" href="https://raw.githubusercontent.com" crossorigin>
-
-  <!-- Meta Pixel (replace PIXEL_ID) -->
-  <script>
-    (function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)})(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    try{ fbq('init','PIXEL_ID'); fbq('track','PageView'); }catch(e){}
-  </script>
-  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=PIXEL_ID&ev=PageView&noscript=1"/></noscript>
-
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Banakar Ayurvedic Gold Kit</title>
+  <meta name="description" content="Banakar Ayurvedic Gold Kit: Trusted, powerful Ayurvedic wellness since 1971">
   <style>
-    :root{
-      --bg:#0a1220; --bg-soft:#0d1a2b; --txt:#e6eef6; --muted:#9aa4b2; --gold:#ffd54a; --gold-2:#ffba08; --ok:#2dd4bf; --danger:#ef4444;
-      --ring:rgba(255,213,74,.35); --glass:rgba(255,255,255,.04); --border:rgba(255,255,255,.06)
+    body {
+      background: #fcf7ea;
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin: 0;
+      color: #222;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{margin:0;background:linear-gradient(180deg,#081220 0%,#07131f 70%);color:var(--txt);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
-    img{display:block;max-width:100%}
-    a{color:inherit}
-    .container{max-width:1200px;margin:0 auto;padding:20px}
-
-    /* Header */
-    .nav{position:sticky;top:0;z-index:20;backdrop-filter:saturate(1.2) blur(8px);background:linear-gradient(90deg,rgba(8,18,32,.85),rgba(8,18,32,.55));border-bottom:1px solid var(--border)}
-    .nav-inner{display:flex;align-items:center;gap:14px;padding:10px 16px}
-    .brand{display:flex;align-items:center;gap:10px;font-weight:800}
-    .brand-logo{height:44px;width:44px;border-radius:12px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.35)}
-    .brand-title{letter-spacing:.3px}
-    .nav-links{margin-left:auto;display:flex;gap:14px}
-    .nav-links a{padding:10px 12px;border-radius:10px;text-decoration:none;color:var(--muted);font-weight:700}
-    .nav-links a:hover{background:var(--glass);color:#fff}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:12px 14px;border-radius:12px;border:1px solid var(--border);background:var(--glass);color:#fff;cursor:pointer;text-decoration:none;font-weight:800}
-    .btn.primary{background:linear-gradient(90deg,var(--gold),var(--gold-2));color:#0b0f18;border:none}
-
-    /* Layout */
-    .grid{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:start}
-
-    /* Hero */
-    .hero{padding:20px 0}
-    .kicker{display:inline-block;background:var(--glass);border:1px solid var(--border);padding:6px 10px;border-radius:999px;color:var(--muted);font-weight:800;margin:10px 0}
-    h1{font-size:clamp(28px,4vw,44px);line-height:1.07;margin:8px 0 12px}
-    .lead{color:var(--muted);margin:0 0 16px}
-    .badges{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 18px}
-    .badge{padding:8px 12px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.015));border:1px solid var(--border);font-weight:700;color:var(--muted)}
-    .feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:18px}
-    .feature{padding:14px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.015));border:1px solid var(--border)}
-    .feature strong{display:block;margin-bottom:4px}
-
-    /* Cards */
-    .card{background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.02));border:1px solid var(--border);border-radius:14px;box-shadow:0 18px 60px rgba(2,6,23,.55)}
-    .media{height:320px;border-radius:12px;overflow:hidden;background:linear-gradient(90deg,#061022,#0a1b2a)}
-    .price-row{display:flex;justify-content:space-between;gap:12px;align-items:center;margin:12px 0}
-    .price{font-weight:900;font-size:26px;background:linear-gradient(90deg,var(--gold),var(--gold-2));-webkit-background-clip:text;background-clip:text;color:transparent}
-    .strike{color:var(--muted);text-decoration:line-through;margin-left:6px}
-    .trust{display:flex;gap:12px;align-items:center;color:var(--muted);font-weight:700;margin-top:12px}
-
-    /* Order sticky */
-    .order{position:sticky;top:88px}
-    .order .card{padding:16px}
-    .options{display:flex;gap:8px;margin:10px 0}
-    .opt{flex:1;padding:10px;border-radius:10px;text-align:center;border:1px solid var(--border);cursor:pointer;color:var(--muted);font-weight:800}
-    .opt.active{border-color:var(--gold);background:linear-gradient(90deg,rgba(255,213,74,.12),rgba(255,186,8,.04));color:#fff}
-    label{display:block;font-weight:800;margin:8px 0 4px;color:var(--muted)}
-    input,textarea,select{width:100%;padding:12px;border-radius:10px;border:1px solid var(--border);background:transparent;color:#e6eef6}
-    textarea{min-height:92px}
-    .hint{font-size:12px;color:var(--muted)}
-
-    /* Sections */
-    .section{margin-top:28px}
-    .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-    .mini-card{padding:14px}
-    .testi{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:12px}
-
-    /* Footer */
-    footer{margin:36px 0 16px;color:var(--muted);text-align:center}
-
-    /* Mobile */
-    @media (max-width:980px){
-      .grid{grid-template-columns:1fr}
-      .order{position:relative;top:auto}
-      .media{height:240px}
-      .cards,.testi,.feature-grid{grid-template-columns:1fr 1fr}
+    .hero {
+      background: linear-gradient(92deg, #b89c56 64%, #478663 100%);
+      text-align: center;
+      color: #fff;
+      padding: 2.7rem 1rem 2.2rem 1rem;
     }
-    @media (max-width:640px){
-      .cards,.testi,.feature-grid{grid-template-columns:1fr}
-      .nav-links{display:none}
+    .hero img {
+      max-width: 340px;
+      width: 90vw;
+      border-radius: 1.2rem;
+      box-shadow: 0 7px 26px rgba(184,156,86,0.13);
     }
-
-    /* Animations */
-    .fade{opacity:0;transform:translateY(8px);animation:fade .6s .05s forwards}
-    @keyframes fade{to{opacity:1;transform:none}}
-
-    /* Toast */
-    .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#0d1a2b;border:1px solid var(--border);color:#fff;padding:12px 16px;border-radius:10px;box-shadow:0 10px 40px rgba(0,0,0,.35);display:none;z-index:40}
-    .toast.show{display:block}
+    .hero h1 {
+      font-size: 2.3rem;
+      margin-top: 1.3rem;
+    }
+    .hero p {
+      font-size: 1.15rem;
+      margin-top: 0.7rem;
+      margin-bottom: 2.2rem;
+    }
+    .cta {
+      background: #478663;
+      color: #fff;
+      border-radius: 2rem;
+      text-decoration: none;
+      padding: 0.9rem 2.3rem;
+      font-size: 1.18rem;
+      font-weight: 600;
+      box-shadow: 0 3px 20px rgba(71,134,99,0.08);
+      transition: background 0.2s;
+      margin-bottom: 0.8rem;
+      display: inline-block;
+    }
+    .cta:hover { background: #366953; }
+    section {
+      max-width: 990px;
+      margin: 2.4rem auto;
+      padding: 2rem 1.3rem;
+      background: #fff;
+      border-radius: 1.2rem;
+      box-shadow: 0 3px 16px rgba(184,156,86,0.09);
+    }
+    h2 {
+      color: #b89c56;
+      font-size: 1.48rem;
+      margin-bottom: 1.25rem;
+    }
+    .row {
+      display: flex;
+      gap: 1.7rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .card {
+      background: #f7fff2;
+      border-radius: 0.7rem;
+      box-shadow: 0 1px 8px #47866314;
+      padding: 1.2rem 0.8rem;
+      width: 210px;
+      text-align: center;
+      margin-bottom: 1.1rem;
+    }
+    .card img {
+      width: 90px;
+      border-radius: 0.58rem;
+    }
+    .about-section p,
+    .contact-section p {
+      font-size: 1.07rem;
+      margin-top: 0.6rem;
+    }
+    .benefits-list, .testimonials-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.3rem;
+      justify-content: center;
+      margin-top: 0.8rem;
+    }
+    .benefit, .testimonial {
+      flex: 1 1 220px;
+      padding: 1rem;
+      border-radius: 0.7rem;
+      box-shadow: 0 1px 8px rgba(184,156,86,0.09);
+      margin-bottom: 0.5rem;
+    }
+    .benefit {
+      background: #fff8e1;
+      color: #478663;
+      font-weight: 600;
+    }
+    .testimonial {
+      background: #e8fcf3;
+      font-style: italic;
+    }
+    @media (max-width: 750px) {
+      .row, .benefits-list, .testimonials-list { flex-direction: column; align-items: center; }
+      section { padding: 1.1rem 0.3rem; }
+      .hero img { max-width: 98vw; }
+    }
   </style>
 </head>
 <body>
-  <div class="nav">
-    <div class="container nav-inner">
-      <div class="brand">
-        <div class="brand-logo">
-          <img src="https://raw.githubusercontent.com/shahalam-3323/Ayushil/main/ayushil_logo.png" alt="Ayushil logo" width="88" height="88" loading="eager" />
-        </div>
-        <div class="brand-title">Ayushil Gold</div>
-      </div>
-      <div class="nav-links">
-        <a href="#products">Products</a>
-        <a href="#benefits">Benefits</a>
-        <a href="#testimonials">Testimonials</a>
-        <a class="btn primary" href="#order">Order Now</a>
-      </div>
-    </div>
+  <div class="hero">
+    <img src="banakar-kit-main.jpg" alt="Banakar Ayurvedic Gold Kit"/>
+    <h1>Banakar Ayurvedic Gold Kit</h1>
+    <p>Pure Ayurveda. Trusted by families since 1971.<br> Maximum benefits, naturally effective!</p>
+    <a href="#order" class="cta">Order Now</a>
   </div>
-
-  <main class="container" id="top">
-    <div class="grid">
-      <!-- Left: Hero & content -->
-      <section class="hero fade">
-        <span class="kicker">Doctor‑Approved • Trusted Since 1971</span>
-        <h1>Strength • Stamina • Confidence — <br/>Ayushil Gold Kit</h1>
-        <p class="lead">परंपरागत ज्ञान और आधुनिक गुणवत्ता के संगम से बना एक संपूर्ण आयुर्वेदिक किट — STAMIN & POWER कैप्सूल के साथ हर्बल ऑयल। दैनिक ऊर्जा, सहनशक्ति और आत्मविश्वास के लिए।</p>
-
-        <div class="badges">
-          <span class="badge">100% Natural</span>
-          <span class="badge">Free Pan‑India Shipping</span>
-          <span class="badge">30‑Day Money‑Back</span>
-        </div>
-
-        <div id="products" class="card" style="padding:16px">
-          <div class="media">
-            <img src="https://raw.githubusercontent.com/shahalam-3323/Ayushil/main/ayushil_hero.jpg" alt="Ayushil Gold Kit hero" width="1200" height="800" loading="lazy" />
-          </div>
-          <div class="price-row">
-            <div>
-              <div class="hint">Complete Kit (60 STAMIN + 60 POWER + Herbal Oil)</div>
-              <div class="price">₹1,599 <span class="strike">₹1,799</span></div>
-            </div>
-            <div style="display:flex;gap:8px;align-items:center">
-              <a class="btn primary" href="#order">Buy Now</a>
-              <a class="btn" href="https://wa.me/919897371502" target="_blank" rel="noopener">WhatsApp</a>
-            </div>
-          </div>
-          <div class="trust">✔️ Secure Payment • ✔️ COD Available • ✔️ GST Invoice</div>
-        </div>
-
-        <div id="benefits" class="feature-grid">
-          <div class="feature"><strong>Natural Vitality</strong><span class="hint">दैनिक ऊर्जा और सहनशक्ति</span></div>
-          <div class="feature"><strong>Doctor‑Backed</strong><span class="hint">BAMS हितैषी फॉर्मूला</span></div>
-          <div class="feature"><strong>Clean & Safe</strong><span class="hint">रसायनमुक्त, गुणवत्ता‑परीक्षित</span></div>
-        </div>
-
-        <div class="section">
-          <div class="cards">
-            <div class="card mini-card"><strong>STAMIN Capsules</strong><p class="hint">Stamina & recovery support</p></div>
-            <div class="card mini-card"><strong>POWER Capsules</strong><p class="hint">Strength & performance</p></div>
-            <div class="card mini-card"><strong>Herbal Oil</strong><p class="hint">Topical support for routine</p></div>
-          </div>
-        </div>
-
-        <div id="testimonials" class="section">
-          <h2 style="margin:0 0 8px">Customers love Ayushil</h2>
-          <div class="testi">
-            <div class="card mini-card"><strong>Rajesh K.</strong><p class="hint">“दो हफ्तों में ही फर्क दिखा — energy & focus बढ़ा।”</p></div>
-            <div class="card mini-card"><strong>Anil S.</strong><p class="hint">“Lightweight & effective. Daily routine में आसानी।”</p></div>
-            <div class="card mini-card"><strong>Vikram P.</strong><p class="hint">“वर्कआउट stamina में noticeable सुधार।”</p></div>
-          </div>
-        </div>
-
-        <div class="section">
-          <h2 style="margin:0 0 8px">FAQs</h2>
-          <div class="card mini-card"><strong>कितने दिनों में परिणाम?</strong><p class="hint">अधिकांश उपयोगकर्ता 10–14 दिनों में सुधार बताते हैं। नियमितता जरूरी है।</p></div>
-          <div class="card mini-card"><strong>क्या COD है?</strong><p class="hint">हाँ, पूरे भारत में COD उपलब्ध।</p></div>
-          <div class="card mini-card"><strong>रिटर्न/रिफंड?</strong><p class="hint">30‑day money‑back policy (T&C).</p></div>
-        </div>
-      </section>
-
-      <!-- Right: Order form -->
-      <aside class="order fade" id="order">
-        <div class="card">
-          <h2 style="margin:8px 0 2px">Order Ayushil Gold Kit</h2>
-          <div class="options" role="tablist">
-            <div class="opt active" id="opt-prepaid" role="tab" aria-selected="true">Prepaid ₹1,599</div>
-            <div class="opt" id="opt-cod" role="tab" aria-selected="false">COD ₹1,799</div>
-          </div>
-
-          <!-- Netlify form -->
-          <form name="order" method="POST" data-netlify="true" netlify-honeypot="bot-field" aria-label="Order form">
-            <input type="hidden" name="form-name" value="order" />
-            <p hidden><label>Don’t fill this out if you're human: <input name="bot-field" /></label></p>
-
-            <label for="name">Full Name</label>
-            <input id="name" name="name" type="text" required placeholder="Aman Kumar" autocomplete="name" />
-
-            <label for="phone">WhatsApp Number</label>
-            <input id="phone" name="phone" type="tel" inputmode="numeric" pattern="[6-9][0-9]{9}" required placeholder="9xxxxxxxxx" autocomplete="tel" />
-
-            <label for="email">Email (optional)</label>
-            <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" />
-
-            <label for="address">Complete Address</label>
-            <textarea id="address" name="address" required placeholder="House no, street, area, city, state, pincode"></textarea>
-
-            <label for="state">State / UT</label>
-            <select id="state" name="state" required>
-              <option value="">Select</option>
-              <option>Andhra Pradesh</option>
-              <option>Arunachal Pradesh</option>
-              <option>Assam</option>
-              <option>Bihar</option>
-              <option>Chhattisgarh</option>
-              <option>Goa</option>
-              <option>Gujarat</option>
-              <option>Haryana</option>
-              <option>Himachal Pradesh</option>
-              <option>Jharkhand</option>
-              <option>Karnataka</option>
-              <option>Kerala</option>
-              <option>Madhya Pradesh</option>
-              <option>Maharashtra</option>
-              <option>Manipur</option>
-              <option>Meghalaya</option>
-              <option>Mizoram</option>
-              <option>Nagaland</option>
-              <option>Odisha</option>
-              <option>Punjab</option>
-              <option>Rajasthan</option>
-              <option>Sikkim</option>
-              <option>Tamil Nadu</option>
-              <option>Telangana</option>
-              <option>Tripura</option>
-              <option>Uttar Pradesh</option>
-              <option>Uttarakhand</option>
-              <option>West Bengal</option>
-              <option>Andaman and Nicobar Islands</option>
-              <option>Chandigarh</option>
-              <option>Dadra and Nagar Haveli and Daman and Diu</option>
-              <option>Delhi (NCT)</option>
-              <option>Jammu and Kashmir</option>
-              <option>Ladakh</option>
-              <option>Lakshadweep</option>
-              <option>Puducherry</option>
-            </select>
-
-            <label for="pincode">Pincode</label>
-            <input id="pincode" name="pincode" type="text" inputmode="numeric" pattern="[0-9]{6}" required placeholder="110001" />
-
-            <!-- Lead meta -->
-            <input type="hidden" id="payment_type" name="payment_type" value="prepaid" />
-            <input type="hidden" id="payment_method" name="payment_method" value="not_paid" />
-            <input type="hidden" id="payment_status" name="payment_status" value="not_paid" />
-            <input type="hidden" id="utm_source" name="utm_source" value="" />
-
-            <div style="display:flex;gap:10px;margin-top:12px">
-              <button type="submit" class="btn primary" id="submit-btn">Proceed & Pay</button>
-              <button type="button" class="btn" id="quick-upi">Quick UPI</button>
-            </div>
-            <p class="hint">We save your order before opening payment so we can assist if payment is cancelled.</p>
-          </form>
-        </div>
-      </aside>
+  <section class="about-section">
+    <h2>About Banakar Ayurveda</h2>
+    <p>
+      For over 50 years, Banakar Ayurveda has brought health and trust to thousands of families.<br>
+      Ancient Ayurvedic wisdom, modern science, and premium ingredients—our Gold Kit delivers pure, safe and powerful results.
+    </p>
+  </section>
+  <section>
+    <h2>What's Inside the Gold Kit?</h2>
+    <div class="row">
+      <div class="card">
+        <img src="power-capsule.jpg" alt="Power Capsules">
+        <h4>Power Capsules</h4>
+        <p>Boosts natural energy and vitality.</p>
+      </div>
+      <div class="card">
+        <img src="stamin-capsule.jpg" alt="Stamin Capsules">
+        <h4>Stamin Capsules</h4>
+        <p>Supports strength & daily stamina.</p>
+      </div>
+      <div class="card">
+        <img src="xtream-oil.jpg" alt="X-tream Oil">
+        <h4>X-tream Oil</h4>
+        <p>Relieves joints & muscles, 100% natural.</p>
+      </div>
     </div>
-  </main>
-
-  <footer>
-    © 2025 Avana Ayurveda • Trusted Since 1971 • Support: <a href="https://wa.me/919897371502" target="_blank" rel="noopener">+91 98973 71502</a>
-  </footer>
-
-  <div class="toast" id="toast"></div>
-
-  <script>
-    (function(){
-      const RZP_LINK = 'https://rzp.io/rzp/dl5enC9'; // <-- confirm this is your live Razorpay short link
-      const form = document.querySelector('form[name="order"]');
-      const optPre = document.getElementById('opt-prepaid');
-      const optCod = document.getElementById('opt-cod');
-      const paymentType = document.getElementById('payment_type');
-      const paymentMethod = document.getElementById('payment_method');
-      const paymentStatus = document.getElementById('payment_status');
-      const utm = document.getElementById('utm_source');
-      const toast = document.getElementById('toast');
-
-      function showToast(msg){ toast.textContent = msg; toast.classList.add('show'); setTimeout(()=>toast.classList.remove('show'), 2600); }
-
-      // UTM capture
-      const params = new URLSearchParams(location.search);
-      if(params.get('utm_source')) utm.value = params.get('utm_source');
-
-      // Payment option toggle
-      [optPre,optCod].forEach(el=>{
-        el.addEventListener('click',()=>{
-          [optPre,optCod].forEach(x=>x.classList.remove('active'));
-          el.classList.add('active');
-          const isPre = el.id==='opt-prepaid';
-          paymentType.value = isPre ? 'prepaid' : 'cod';
-          paymentMethod.value = isPre ? 'prepaid' : 'cod';
-          paymentStatus.value = isPre ? 'pending' : 'not_paid';
-          document.getElementById('submit-btn').textContent = isPre ? 'Proceed & Pay' : 'Place COD Order';
-        });
-      });
-
-      // Helper: post to Netlify via fetch (keeps SPA, faster)
-      async function postToNetlify(f){
-        const data = new FormData(f);
-        if(!data.get('form-name')) data.append('form-name', f.getAttribute('name')||'order');
-        const body = new URLSearchParams();
-        for(const [k,v] of data.entries()) body.append(k,v);
-        const res = await fetch('/', { method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body: body.toString() });
-        return res;
-      }
-
-      // Submit
-      form.addEventListener('submit', async function(e){
-        e.preventDefault();
-        const phone = document.getElementById('phone').value.trim();
-        const pin = document.getElementById('pincode').value.trim();
-        if(!/^[6-9][0-9]{9}$/.test(phone)){ showToast('कृपया 10‑digit मोबाइल नंबर दर्ज करें'); return; }
-        if(!/^[0-9]{6}$/.test(pin)){ showToast('कृपया 6‑digit पिनकोड दर्ज करें'); return; }
-
-        const btn = document.getElementById('submit-btn');
-        btn.disabled = true; const old = btn.textContent; btn.textContent = 'Saving…';
-        try{
-          try{ fbq('track','Lead'); }catch(e){}
-          const res = await postToNetlify(form);
-          if(!res.ok) throw new Error('Netlify save failed');
-
-          if(paymentType.value==='prepaid'){
-            try{ fbq('track','InitiateCheckout'); }catch(e){}
-            const name = encodeURIComponent(document.getElementById('name').value||'');
-            const contact = encodeURIComponent(phone||'');
-            const url = `${RZP_LINK}?prefill[name]=${name}&prefill[contact]=${contact}&utm_source=${encodeURIComponent(utm.value||'')}`;
-            window.open(url,'_blank','noopener');
-            showToast('Payment window opened');
-          }else{
-            showToast('COD order placed. We will confirm soon.');
-          }
-        }catch(err){ console.error(err); alert('कुछ गड़बड़ हुई — दोबारा कोशिश करें या WhatsApp पर संदेश भेजें।'); }
-        finally{ btn.disabled=false; btn.textContent = old; }
-      });
-
-      document.getElementById('quick-upi').addEventListener('click', function(){
-        const name=encodeURIComponent(document.getElementById('name').value||'');
-        const contact=encodeURIComponent(document.getElementById('phone').value||'');
-        window.open(`${RZP_LINK}?prefill[name]=${name}&prefill[contact]=${contact}`,'_blank','noopener');
-      });
-
-      // Smooth anchor
-      document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',function(e){
-        const id=this.getAttribute('href'); if(id.length<2) return;
-        const t=document.querySelector(id); if(!t) return; e.preventDefault(); t.scrollIntoView({behavior:'smooth',block:'start'});
-      }));
-    })();
-  </script>
-
-  <!-- SEO: Product structured data -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Product",
-    "name":"Ayushil Gold Kit",
-    "image":["https://raw.githubusercontent.com/shahalam-3323/Ayushil/main/ayushil_hero.jpg"],
-    "description":"Ayushil Gold Kit - Ayurvedic kit for strength, stamina & vitality.",
-    "brand":{"@type":"Brand","name":"Avana Ayurveda"},
-    "offers":{"@type":"Offer","priceCurrency":"INR","price":"1599","availability":"https://schema.org/InStock"}
-  }
-  </script>
+  </section>
+  <section>
+    <h2>Key Benefits</h2>
+    <div class="benefits-list">
+      <div class="benefit">100% Natural, No Chemicals</div>
+      <div class="benefit">Fast & Long-Lasting Results</div>
+      <div class="benefit">Doctor Trusted Formula</div>
+      <div class="benefit">Satisfaction Guaranteed</div>
+    </div>
+  </section>
+  <section>
+    <h2>Real Testimonials</h2>
+    <div class="testimonials-list">
+      <div class="testimonial">"Mere joints ka dard gaya 2 hafte mein. Banakar kit asli aur zabardast hai!" – Ramesh, Mumbai</div>
+      <div class="testimonial">"Natural energy aur stamina, side effects nahi. Highly recommend!" – Sunita, Delhi</div>
+    </div>
+  </section>
+  <section id="order" class="contact-section">
+    <h2>Order & Contact</h2>
+    <p>
+      WhatsApp/Call: <b>+91-XXXXXXXXXX</b><br>
+      Email: <b>orders@banakarayurveda.com</b>
+    </p>
+  </section>
 </body>
 </html>
